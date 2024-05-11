@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="template_form_inherit" model="ir.ui.view">
+            <field name="name">model.template.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='barcode']" position="after">
+                        <field name="name_inherit" widget="many2one_tags"/>
+                    </xpath>
+
+                    <xpath expr="//field[@name='default_code']" position="after">
+                        <field name="Done_business" widget="many2many"/>
+                    </xpath>
+                    <xpath expr="//field[@name='barcode']" position="before">
+                        <field name="tag" widget="many2many_tags"/>
+                    </xpath>
+                    <xpath expr="//field[@name='barcode']" position="before">
+                        <field name="wizard_ids" widget="one2many"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="user_form_inherit" model="ir.ui.view">
+            <field name="name">model.user.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='order_line']//tree//field[@name='name']" position="before">
+                        <field name="user1"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="datetime_change_inherit_sale" model="ir.ui.view">
+            <field name="name">datetime.change.inherit.sale</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='partner_id']" position="after">
+                        <field name="customer_rating1" />
+                    </xpath>
+                    <xpath expr="//field[@name='date_order']" position="after">
+                        <field name="new_Quotation_Date"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>

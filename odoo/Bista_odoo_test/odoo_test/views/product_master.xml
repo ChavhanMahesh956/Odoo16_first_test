@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_branch_form" model="ir.ui.view">
+        <field name="name">product.branch.form</field>
+        <field name="model">branch.product.data</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="cost"/>
+                        <field name="sales_price"/>
+                        <field name="product"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_product_tree" model="ir.ui.view">
+        <field name="name">product.master.tree</field>
+        <field name="model">branch.product.data</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+                <field name="cost"/>
+                <field name="sales_price"/>
+                <field name="product"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_branch_style" model="ir.actions.act_window">
+        <field name="name">Branch Product</field>
+        <field name="res_model">branch.product.data</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="view_id" ref="view_product_tree"/>
+    </record>
+</odoo>

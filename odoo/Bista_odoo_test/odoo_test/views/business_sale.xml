@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_style_tree" model="ir.ui.view">
+        <field name="name">product.sale.tree</field>
+        <field name="model">product.sale</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_product_business" model="ir.actions.act_window">
+        <field name="name">Business Sale</field>
+        <field name="res_model">product.sale</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree</field>
+    </record>
+</odoo>

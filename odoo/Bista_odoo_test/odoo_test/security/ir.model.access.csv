@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+odoo_test.access_product_style,access_product_style,odoo_test.model_product_style,base.group_user,1,1,1,1
+odoo_test.access_product_sale,access_product_sale,odoo_test.model_product_sale,base.group_user,1,1,1,1
+odoo_test.access_branch_product_data,access_branch_product_data,odoo_test.model_branch_product_data,base.group_user,1,1,1,1
+odoo_test.access_product_tags,access_product_tags,odoo_test.model_product_tags,base.group_user,1,1,1,1
+odoo_test.access_config_tags,access_config_tags,odoo_test.model_config_tags,base.group_user,1,1,1,1
+odoo_test.access_wizard,access_wizard,odoo_test.model_wizard,base.group_user,1,1,1,1

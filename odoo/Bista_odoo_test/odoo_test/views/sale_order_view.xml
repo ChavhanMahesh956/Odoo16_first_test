@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_sale_order_form_inherit" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//button[@name='action_confirm']" position="after">
+                        <header>
+                            <button name="custom_button_action" string="Custom Button" type="object" class="oe_highlight" context="{'validate_analytic': True}" attrs="{'invisible': [('purchase_order','!=',False)]}"/>
+                            <button id="wizard_button" name="%(wizard_action)d" string="Create Wizard" type="action" class="oe_highlight" context="{'validate_analytic': True}"/>
+                        </header>
+                    </xpath>
+                    <xpath expr="//field[@name='partner_id']" position="after">
+                        <field name="purchase_order"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>

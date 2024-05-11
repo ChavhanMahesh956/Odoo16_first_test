@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Product Style" id="menu_style" parent="sale.product_menu_catalog" action="action_product_style" sequence="55"/>
+    <menuitem name="Branch Product Data" id="menu_product_style" parent="sale.product_menu_catalog" action="action_branch_style" sequence="10"/>
+    <menuitem name="Business Category" id="menu_product_business" parent="sale.product_menu_catalog" action="action_product_business" sequence="10"/>
+    <menuitem name="Product Tags" id="menu_product_tag" parent="sale.product_menu_catalog" action="action_product_tag" sequence="30"/>
+    <menuitem name="Config Tags" id="menu_config1_tag" parent="sale.prod_config_main" action="action_config_tag" sequence="10"/>
+    <menuitem name="Sale Orders" id="sale.sale_order_menu" parent="sale.sale_menu_root"/>
+    <menuitem name="Create Product and Quantity" id="product_wizard" parent="sale.product_menu_catalog" action="wizard_action" sequence="10"/>
+</odoo>
+
+
